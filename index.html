@@ -3,12 +3,20 @@
   
 <head>
   <!-- Inclusion de la feuille de style externe -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ma page de portfolio présentant mes compétences et mes projets">  
     <meta charset="UTF-8">
     <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="transition">
+    <!-- Contenu de la transition -->
+    <h2>Transition</h2>
+    <p>Ceci est une transition entre la section 1 et la section 2.</p>
+  </div>
+ 
+
   <section class="section1">
     <!-- contenu de la section 1 -->
       <h1>Mon Portfolio</h1>
@@ -42,13 +50,12 @@
   </div>
   </section>
  
- <div class="transition">
-   <!-- Contenu de la transition -->
-   <h2>Transition</h2>
-   <p>Ceci est une transition entre la section 1 et la section 2.</p>
- </div>
- 
- 
+  <script>
+    window.addEventListener('load', function() {
+      document.querySelector('.section2').classList.add('loaded');
+      document.querySelector('.transition').classList.add('is-active');
+    });
+  </script>
 
    <section class="section2">
     <!-- contenu de la section 2 -->
