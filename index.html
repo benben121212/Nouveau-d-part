@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="description" content="Ma page de portfolio présentant mes compétences et mes projets">  
+    <meta name="description" content="Présentation de mon projet jeu vidéo">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Mon Portfolio</title>
+    <title>Jeu Vidéo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="section1">
-    <!-- contenu de la section 1 -->
-    <h1>Mon Portfolio</h1>
-    <h2>À propos de moi</h2>
-    <p>Je suis un développeur web passionné par la création de sites web et d'applications.</p>
-    <!-- Div pour les compétences -->
-    <div class="containerComp">
-      <h2>Mes compétences</h2>
-      <div class="containerLien">
-        <ul>
-          <li><a href="https://fr.m.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a></li> 
-          <li><a href="https://fr.m.wikipedia.org/wiki/Feuilles_de_style_en_cascade">CSS</a></li> 
-          <li><a href="https://fr.m.wikipedia.org/wiki/JavaScript">JavaScript</a></li>   
-        </ul>
+   <!--ajoute du contenu pour un bandeau tous en haut du site-->
+   <header>
+    <div class="menu">
+      <div class="logo">
+        <img src="votre_logo.png" alt="Logo">
       </div>
-    </div>
-    <!-- Div pour les projets -->
-    <div class="containerProjets">
-      <h2>Mes projets</h2>
-      <nav>
-        <div class="image-container">
-          <ul> 
-            <li><a href="#"><img class="responsive-img" src="https://media.senscritique.com/media/000008251122/1200/pong.jpg" alt="Projet 1"></a></li> 
-            <li><a href="#"><img class="responsive-img" src="https://wp.oclock.io/wp-content/uploads/2017/02/1391709-couv-866x495-800x495.jpeg" alt="Projet 2"></a></li> 
-            <li><a href="#"><img class="responsive-img" src="https://www.onlinemania.es/genesis/super_dk99/2.jpg" alt="Projet 3"></a></li> 
+      <div class="menu-deroulant">
+        <nav class="menu">
+          <ul>
+            <li><a href="#section1">Accueil</a></li>
+            <li><a href="#section2">Monde</a></li> 
+            <li><a href="#section3">Histoire</a></li> 
+            <li><a href="#section4">Personnage principal</a></li>
+            <li><a href="#section5">Personnages secondaires</a></li> 
+            <li><a href="#section6">Faunes</a></li>
+            <li><a href="#section7">Véhicules</a></li>     
           </ul>
-        </div>
-      </nav>
-    </div>
-  </section>
-  <section class="section2">
-    <div class="containerMain">
-      <!-- contenu de la section 2 -->
-      <h2>Bienvenue sur ma page Test</h2><br>
-         <p>Le HTML est un langage de balisage utilisé pour créer des pages web. Les balises HTML sont des éléments qui définissent la structure et le contenu de la page web. Les balises sont composées d'un nom et d'attributs qui spécifient des informations supplémentaires sur l'élément.</p>
-        </main>
+        </nav> 
       </div>
-    </section>
-    <script src="script.js"></script>
-          
-   </body>
-  </html>
+    </div>
+    <div class="accueil"> <!-- Ajout de la classe "accueil" -->
+      <section class="section1" id="section1">
+        <div class="titrepage"> 
+          <h1>Projet de création Unity3D</h1>
+        </div>
+        <!-- contenu de la section 1 -->
+        <div class="presentation">
+          <h2>À propos de moi</h2>
+          <p>Je suis un développeur web passionné par la création de sites web et d'applications.</p>
+        </div>
+        <!-- Div pour les compétences -->
+        <div class="containerComp">
+          <h2>Projets</h2>
+          <div class="containerLien">
+            <ul>
+              <li><a href="#section2">Monde</a></li> 
+              <li><a href="#section3">Histoire</a></li> 
+              <li><a href="#section4">Personnage principal</a></li>
+              <li><a href="#section5">Personnages secondaires</a></li> 
+              <li><a href="#section6">Faunes</a></li>
+              <li><a href="#section7">Véhicules</a></li>     
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+  
+  <main>
+   <section class="section2" id="section2">
+     <h2>Monde</h2>
+     <p>Description du monde</p>
+   </section>
+
+   <section class="section3" id="section3">
+     <h2>Histoire</h2>
+     <p>Résumé de l'histoire du jeu vidéo</p>
+   </section>
+
+   <section class="section4" id="section4">
+     <h2>Personnage principal</h2>
+     <p>Description du personnage principal</p>
+   </section>
+
+   <section class="section5" id="section5">
+     <h2>Personnages secondaires</h2>
+     <p>Description des personnages secondaires</p>
+   </section>
+
+   <section class="section6" id="section6">
+    <h2>Faunes</h2>
+    <p>Description des personnages secondaires</p>
+   </section>
+
+   <section class="section7" id="section7">
+    <h2>Véhicules</h2>
+    <p>Description des personnages secondaires</p>
+   </section>
+  </main>
+ </body>
+</html>

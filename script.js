@@ -1,49 +1,43 @@
-// Sélection des éléments HTML
+const sectionNames = ['Accueil', 'Monde', 'Histoire', 'Personnage principal', 'Personnages secondaires', 'Faunes', 'Véhicules'];
+const sectionIDs = ['accueil', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'];
+
 const sections = document.querySelectorAll('.section');
-const section1 = document.querySelector('.section1');
-const section2 = document.querySelector('.section2');
-const containerMain = document.querySelector('.containerMain');
+const sectionHeights = [...sections].map(section => section.offsetHeight);
+const totalHeight = sectionHeights.reduce((total, height) => total + height);
 
-// Variables pour stocker les hauteurs des sections
-let section1Height = sections[0].offsetHeight;
-let section2Height = sections[1].offsetHeight;
+const section3Start = sectionHeights[0] + sectionHeights[1];
+const section4Start = section3Start + sectionHeights[2];
+const section4End = section4Start + sectionHeights[3];
+const section5Start = section4End;
+const section5End = section5Start + sectionHeights[4];
+const section6Start = section5End;
+const section6End = section6Start + sectionHeights[5];
+const section7Start = section6End;
 
-// Fonction pour gérer le défilement de la page
-function handleScroll() {
-  // Réinitialiser la classe "is-active" de la section 2
-  section2.classList.remove('is-active');
+const setActiveSection = (scrollPosition) => {
+  sections.forEach((section, index) => {
+    section.classList.remove('is-active');
+    if (scrollPosition >= section3Start && scrollPosition < section4Start && index === 2) {
+      section.classList.add('is-active');
+    }
+    if (scrollPosition >= section4Start && scrollPosition < section5Start && index === 3) {
+      section.classList.add('is-active');
+    }
+    if (scrollPosition >= section5Start && scrollPosition < section6Start && index === 4) {
+      section.classList.add('is-active');
+    }
+    if (scrollPosition >= section6Start && scrollPosition < section7Start && index === 5) {
+      section.classList.add('is-active');
+    }
+    if (scrollPosition >= section7Start && index === 6) {
+      section.classList.add('is-active');
+    }
+  });
+};
 
-  // Calculer la hauteur de la section 2 en fonction de la position de défilement
+const handleScroll = () => {
   const scrollPosition = window.pageYOffset;
-  section2Height = Math.max(0, sections[1].offsetHeight - scrollPosition);
-  containerMain.style.height = `${section2Height}px`;
+  setActiveSection(scrollPosition);
+};
 
-  // Calculer le décalage nécessaire pour la section2 en fonction de la position de défilement
-  const parallaxOffset = -scrollPosition / 2;
-
-  // Appliquer la transformation en translation à la section2
-  section2.style.transform = `translateY(${parallaxOffset}px)`;
-
-  // Vérifier si la section 1 est hors de vue
-  if (scrollPosition > section1Height) {
-    // Ajouter la classe "is-active" à la section 2
-    section2.classList.add('is-active');
-    // Masquer la section 1
-    sections[0].style.opacity = '0';
-    // Ajouter la transition à la boîte principale
-    containerMain.classList.add('transition');
-  } else {
-    // Réafficher la section 1
-    sections[0].style.opacity = '1';
-    // Supprimer la transition de la boîte principale
-    containerMain.classList.remove('transition');
-  }
-}
-
-// Écouter l'événement de défilement
 window.addEventListener('scroll', handleScroll);
-
-// Initialiser la classe "is-active" de la section 2
-section2.classList.add('is-active');
-
-// Commentaire expliquant l'objectif de la fonction handleScroll: cette fonction gère le défilement de la page et modifie l'apparence de la section 1 et 2 ainsi que la hauteur de la boîte principale en fonction de la position de défilement de la page.
