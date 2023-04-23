@@ -10,12 +10,13 @@
 <body>
    <!--ajoute du contenu pour un bandeau tous en haut du site-->
    <header>
-    <div class="menu">
+    <div class="menu" id="sectionmenu">
       <div class="logo">
-        <img src="votre_logo.png" alt="Logo">
+        <img src="/Images/logo.png" alt="Logo">
       </div>
       <div class="menu-deroulant">
-        <nav class="menu">
+        <button onclick="toggleMenu()">Menu</button>
+        <nav class="menu-deroulant">
           <ul>
             <li><a href="#section1">Accueil</a></li>
             <li><a href="#section2">Monde</a></li> 
@@ -28,7 +29,7 @@
         </nav> 
       </div>
     </div>
-    <div class="accueil"> <!-- Ajout de la classe "accueil" -->
+    <div class="accueil" id="sectionaccueil"> 
       <section class="section1" id="section1">
         <div class="titrepage"> 
           <h1>Projet de création Unity3D</h1>
@@ -37,20 +38,6 @@
         <div class="presentation">
           <h2>À propos de moi</h2>
           <p>Je suis un développeur web passionné par la création de sites web et d'applications.</p>
-        </div>
-        <!-- Div pour les compétences -->
-        <div class="containerComp">
-          <h2>Projets</h2>
-          <div class="containerLien">
-            <ul>
-              <li><a href="#section2">Monde</a></li> 
-              <li><a href="#section3">Histoire</a></li> 
-              <li><a href="#section4">Personnage principal</a></li>
-              <li><a href="#section5">Personnages secondaires</a></li> 
-              <li><a href="#section6">Faunes</a></li>
-              <li><a href="#section7">Véhicules</a></li>     
-            </ul>
-          </div>
         </div>
       </section>
     </div>
