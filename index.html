@@ -1,78 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="description" content="Présentation de mon projet jeu vidéo">  
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="description" content="Portfolio">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    
     <title>Jeu Vidéo</title>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <!--ajoute du contenu pour un bandeau tous en haut du site-->
-   <header>
-    <div class="menu" id="sectionmenu">
-      <div class="logo">
-        <img src="/Images/logo.png" alt="Logo">
-      </div>
-      <div class="menu-deroulant">
-        <button onclick="toggleMenu()">Menu</button>
-        <nav class="menu-deroulant">
-          <ul>
-            <li><a href="#section1">Accueil</a></li>
-            <li><a href="#section2">Monde</a></li> 
-            <li><a href="#section3">Histoire</a></li> 
-            <li><a href="#section4">Personnage principal</a></li>
-            <li><a href="#section5">Personnages secondaires</a></li> 
-            <li><a href="#section6">Faunes</a></li>
-            <li><a href="#section7">Véhicules</a></li>     
-          </ul>
-        </nav> 
-      </div>
-    </div>
-    <div class="accueil" id="sectionaccueil"> 
-      <section class="section1" id="section1">
-        <div class="titrepage"> 
-          <h1>Projet de création Unity3D</h1>
-        </div>
-        <!-- contenu de la section 1 -->
-        <div class="presentation">
-          <h2>À propos de moi</h2>
-          <p>Je suis un développeur web passionné par la création de sites web et d'applications.</p>
-        </div>
-      </section>
-    </div>
+  <!-- Styles pour le header -->
+  <header class="header">
+    
+    <img src="/Images/logo.png" alt="Logo" class="logo">
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfoli">Portfolio</a>
+      <a href="contact">Contact</a>
+    </nav>
+
   </header>
-  
-  <main>
-   <section class="section2" id="section2">
-     <h2>Monde</h2>
-     <p>Description du monde</p>
-   </section>
+  <section class="home" id="home">
+   <div class="home-content">
+    <h3>
+      Hello, it's me 
+    </h3>
+    <h1>
+      Ben DE
+    </h1>
+    <h3>
+      And i'm <span>Frontend Developer</span>
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nam porro optio nisi dolore vero, aut neque quae molestiae modi.
+    </p>
+    <div class="social-media">
+      <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+    </div>
+    <a href="#" class="btn">Download CV</a>
+   </div>
 
-   <section class="section3" id="section3">
-     <h2>Histoire</h2>
-     <p>Résumé de l'histoire du jeu vidéo</p>
-   </section>
+   <div class="home-img">
+    <img src="/Images/avatar.png" alt="">
+   </div>
+  </section>
 
-   <section class="section4" id="section4">
-     <h2>Personnage principal</h2>
-     <p>Description du personnage principal</p>
-   </section>
 
-   <section class="section5" id="section5">
-     <h2>Personnages secondaires</h2>
-     <p>Description des personnages secondaires</p>
-   </section>
+  <script src="script.js"></script>
 
-   <section class="section6" id="section6">
-    <h2>Faunes</h2>
-    <p>Description des personnages secondaires</p>
-   </section>
-
-   <section class="section7" id="section7">
-    <h2>Véhicules</h2>
-    <p>Description des personnages secondaires</p>
-   </section>
-  </main>
  </body>
 </html>
