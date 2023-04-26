@@ -211,16 +211,23 @@ header {
   text-align: center;
   }
 
+  #btnSections {
+    display: none;
+  }
+
   @media screen and (max-width: 900px) {
-    .Survie-MMORPG,
-    .Exploration,
-    .Campements,
-    .Attaques-Alliances,
-    .Graphismes-Mécaniques-Communauté {
+    #btnSections {
+      display: block;
+    }
+  
+    #sectionsContainer {
       display: none;
     }
-    
- 
+  
+    #sectionsContainer.sections-visible {
+      display: block;
+    }
+  
     #section3 {
       flex-direction: column;
       justify-content: center;
@@ -228,15 +235,40 @@ header {
       padding: 40px;
       min-height: 100vh;
     }
+  
     #section3 h2 {
       padding: 20px;
       font-size: 1.5em;
     }
-    
+  
     #section3 p {
       margin: 20px;
       font-size: 1em;
     }
+  
+    /* cacher toutes les sections par défaut */
+    .Survie-MMORPG,
+    .Exploration,
+    .Campements,
+    .Attaques-Alliances,
+    .Graphismes-Mécaniques-Communauté {
+      display: none;
+    }
+  
+    /* afficher les sections qui ont la classe correspondante */
+    #sectionsContainer.sections-visible .Survie-MMORPG,
+    #sectionsContainer.sections-visible .Exploration,
+    #sectionsContainer.sections-visible .Campements,
+    #sectionsContainer.sections-visible .Attaques-Alliances,
+    #sectionsContainer.sections-visible .Graphismes-Mécaniques-Communauté {
+      display: block;
+    }
+  }
+  
+  /* ajouter un style pour le bouton lorsque les sections sont visibles */
+  #btnSections.sections-visible {
+    background-color: green;
+    color: white;
   }
   
 
@@ -337,5 +369,4 @@ header {
 .Contact button[type="submit"]:hover {
   background-color: #85b7ec;
   color: #00ff62
-}
 }

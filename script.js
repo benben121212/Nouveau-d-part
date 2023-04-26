@@ -25,3 +25,19 @@ function detectActiveSection() {
 detectActiveSection();
 
 window.addEventListener("scroll", detectActiveSection);
+
+/* bouton selecteur jeu video */
+
+function toggleSections() {
+    var sectionsContainer = document.getElementById("sectionsContainer");
+    var btnSections = document.getElementById("btnSections");
+    if (sectionsContainer.classList.contains("sections-visible")) {
+      sectionsContainer.classList.remove("sections-visible");
+      btnSections.classList.remove("sections-visible");
+      btnSections.innerHTML = "Afficher les sections";
+    } else {
+      sectionsContainer.classList.add("sections-visible");
+      btnSections.classList.add("sections-visible");
+      btnSections.innerHTML = "Masquer les sections";
+    }
+  }
