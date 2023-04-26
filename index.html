@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="description" content="Portfolio">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    
-    <title>Portfolio</title>
-
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <meta name="description" content="Mon site"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site web</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Styles pour le header -->
-  <header class="header">
-    
-    <img src="/Images/logo.png" alt="Logo" class="logo">
-
-    <i class="bx bx-menu" id="menu-icon"></i>
 
     <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfoli">Portfolio</a>
-      <a href="contact">Contact</a>
+        <img src="/Images/logo.png" alt="logo" class="logo"></img>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#section1">Accueil</a></li>
+                <li><a href="#section2">Présentation</a></li>
+                <li><a href="#section3">Projet</a></li>
+                <li><a href="#section4">Projet 2</a></li>
+                <li><a href="#section5">Contact</a></li>
+            </ul>
+        </div>
+        <img src="/Images/menu-btn.png" alt="menu-hamburger" class="menu-hamburger">
     </nav>
 
-  </header>
-  <section class="home" id="home">
-   <div class="home-content">
-    <h3>
-      Hello, it's me 
-    </h3>
-    <h1>
-      Ben DE
-    </h1>
-    <h3>
-      And i'm <span>Frontend Developer</span>
-    </h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nam porro optio nisi dolore vero, aut neque quae molestiae modi.
-    </p>
-    <div class="social-media">
-      <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-      <a href="#"><i class='bx bxl-twitter'></i></a>
-      <a href="#"><i class='bx bxl-instagram'></i></a>
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
-    </div>
-    <a href="#" class="btn">Download CV</a>
-   </div>
+    <header class="Accueil" id="section1">
+      <h1>Bienvenue sur mon site</h1>
+      <p>
+        Bienvenue sur mon site web personnel où je partage mes idées, mes projets. 
+      </p>
+    </header>
 
-   <div class="home-img">
-    <img src="/Images/avatar.png" alt="">
-   </div>
-  </section>
+    <section class="Presentation" id="section2">
+      <h2>Présentation</h2>
+      <p>
+        Bienvenue sur mon site dédié à mes projets de développement web full stack. Mon but est de partager mes projets
+        et mes progrès avec la communauté des développeurs, tout en m'exerçant à relever des défis techniques pour
+        proposer des solutions innovantes et fonctionnelles.
+        Vous trouverez ici mes projets, auxquels vous pourrez accéder et suivre mes développements.
+        Mon objectif est de m'inspirer et de m'aider à apprendre les meilleures pratiques pour le développement web,
+        de la conception à la mise en production, en passant par le choix des technologies et l'optimisation des performances.
+        N'hésitez pas à me contacter si vous avez des questions ou des commentaires, je suis toujours ravi d'échanger avec la
+        communauté des développeurs web.
+        Enfin, je vous remercie de votre visite sur mon site et j'espère que vous y trouverez des contenus pertinents et
+         intéressants.
+      </p>
+    </section>
+  
+    <section class="Projet" id="section3">
+      <h2>Projet jeu vidéo</h2>
+      <p>
+        Mon projet consiste à créer un jeu vidéo de style survie en monde ouvert, massivement multijoueur, qui se déroule
+        sur Terre, dans l'eau, dans le ciel et dans l'espace. Le joueur aura la possibilité d'explorer différents 
+        environnements, d'atterrir sur d'autres planètes et d'interagir avec des joueurs du monde entier. Le jeu 
+        offrira également la possibilité de construire des campements, de développer des compétences, d'attaquer 
+        les campements des autres joueurs et de former des alliances dans un univers vaste et évolutif. Avec des 
+        graphismes époustouflants, une mécanique de jeu innovante et une communauté engagée, ce jeu sera une expérience 
+        immersive unique pour tous les passionnés de jeux de survie et de monde ouvert.
+      </p>
+    </section>
+  
+    <section class="Projet2" id="section4">
+      <h2>Projet 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at minus eos suscipit aliquam illo laborum,
+        blanditiis cum ut inventore. Itaque obcaecati vitae soluta dolorum atque tempora quod temporibus maxime ipsa
+        ratione inventore, excepturi blanditiis, necessitatibus exercitationem sit assumenda? Unde quidem facere 
+        perspiciatis ullam, repellendus vel cupiditate! Possimus blanditiis quidem quae animi perspiciatis expedita cum!
+         Quod sapiente, velit error qui enim cupiditate adipisci doloremque magni nesciunt voluptatum id quisquam officia
+          aliquid modi perspiciatis suscipit non. Ratione, ipsa aliquid? Laborum, cupiditate?
+      </p>
+    </section>
+  
+    <section class="Contact" id="section5">
+      <h2>Contactez-nous</h2>
+        <form action="sendmail.php" method="POST">
+         <label for="name">Nom :</label>
+         <input type="text" id="name" name="name" required>
 
+         <label for="email">Email :</label>
+         <input type="email" id="email" name="email" required>
 
-  <script src="script.js"></script>
+         <label for="message">Message :</label>
+         <textarea id="message" name="message" required></textarea>
 
- </body>
+         <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

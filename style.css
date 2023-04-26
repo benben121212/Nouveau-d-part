@@ -1,145 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
-
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
- }
-
- :root {
-  --bg-color: #1f212d;
-  --second-bg-color: #323946;
-  --text-color: #fff;
-  --main-color: #0ef;
- }
-
- html {
-  font-size: 62.5%;
-  overflow-x:hidden
- }
-
- body {
-  background: var(--bg-color);
-  color: var(--text-color);
- }
-
- section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
-
- }
-
- .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 9%;
-  background: var(--bg-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
+  list-style: none;
 }
 
-.logo {
-  font-size: 2.5rem;
-  color: var(--text-color);
-  font-weight: 600;
-  cursor: default;
+body {
+  font-family:Arial, sans-serif;
+}
+
+header {  
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/Images/background2.jpg);
+  background-size: cover;
+}
+
+.Accueil {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 280px;
+  width: 100%;
+}
+
+.Accueil h1 {
+  margin-bottom: 40px;
+  color: rgb(255, 0, 0);
+}
+
+
+.Accueil p {
+  color: rgb(252, 252, 252);
+  margin: 40px;
+}
+
+.navbar {
+  text-align: center;
+  position: absolute;
+  padding-top: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
 }
 
 .navbar a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 500;
-  margin-left: 3.5rem;
-  transition: .3s;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: white;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: var(--main-color)
-  
-}
-
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-img {
-  width: 35vw;
-}
-
-.home-content h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.home-content h3:nth-of-type(2) {
-  margin-bottom: 2rem;
-}
-
-span {
-  color: var(--main-color)
-}
-
-.home-content h1 {
-  font-size: 5.6rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.home-content p {
-  font-size: 1.6rem;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: .2rem solid var(--main-color);
-  border-radius: 50%;
+.navbar .logo {
   font-size: 2rem;
-  color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: .5s ease;
 }
 
-.social-media a:hover {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-}
+.navbar .nav-links ul {
+  display: flex;
+} 
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--second-bg-color);
-  letter-spacing: .1rem;
+.navbar .nav-links ul li {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 0.5px solid;
+  border-color: rgba(148, 0, 0, 0.322);
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+} 
+
+.navbar .nav-links ul li:hover{
+  background-color: rgba(6, 27, 83, 0.808);
+
+} 
+
+.navbar .nav-links ul li.active a {
+  color: rgb(255, 238, 0);
   font-weight: 600;
+} 
+
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  width: 35px;
 }
 
-.btn:hover {
-  box-shadow: none;
+
+@media screen and (max-width:900px) {
+  .navbar{
+      padding: 0;
+  }
+
+  .navbar .logo {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+  }
+
+  .navbar .menu-hamburger {
+      display: block;    
+  }
+
+  .nav-links {
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.445);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -100%;
+      transition: 0.5s ease;
+  }
+  
+  .nav-links.mobile-menu {
+  margin-left: 0;
+  }
+
+  .nav-links ul {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .navbar .nav-links ul li{
+      margin: 25px 0;
+      font-size: 1.2rem;
+  }
+}
+
+.Presentation {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/Images/background2.jpg);
+  background-size: cover;
+}
+
+.Presentation h2 {
+  color: rgb(255, 0, 0);
+  padding: 40px;
+}
+
+.Presentation p {
+  color: rgb(252, 252, 252);
+  margin: 40px;
+}
+
+.Projet {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/Images/background2.jpg);
+  background-size: cover;
+}
+
+.Projet h2 {
+  color: rgb(255, 0, 0);
+  padding: 40px;
+}
+
+.Projet p {
+  color: rgb(252, 252, 252);
+  margin: 40px;
+}
+
+.Projet2 {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/Images/background2.jpg);
+  background-size: cover;
+}
+
+.Projet2 h2 {
+  color: rgb(255, 0, 0);
+  padding: 40px;
+}
+
+.Projet2 p {
+  color: rgb(252, 252, 252);
+  margin: 40px;
+}
+
+.Contact {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/Images/background2.jpg);
+  background-size: cover;
+  color: white;
+  text-decoration: underline;
+  background-color: #f5f5f5;
+  padding: 50px;
+}
+
+.Contact h2 {
+  color: red;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contact label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.Contact input,
+.Contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.Contact button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.Contact button[type="submit"]:hover {
+  background-color: #85b7ec;
+  color: #00ff62
 }
